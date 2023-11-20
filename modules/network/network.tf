@@ -8,6 +8,7 @@ module "vnet" {
   version = "4.1.0"
 
   resource_group_name = azurerm_resource_group.rg.name
+  vnet_name           = "vnet-test-terraform"
   use_for_each        = true
   vnet_location       = azurerm_resource_group.rg.location
   address_space       = ["10.0.0.0/16"]
