@@ -8,7 +8,8 @@ module "vnet" {
   version = "4.1.0"
 
   resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
+  use_for_each        = true
+  vnet_location       = azurerm_resource_group.rg.location
   address_space       = ["10.0.0.0/16"]
   subnet_prefixes     = ["10.0.0.0/24", "10.0.1.0/24"]
   subnet_names        = ["aks-subnet", "app-gateway-subnet"]
