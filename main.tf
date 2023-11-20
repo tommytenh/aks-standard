@@ -1,2 +1,3 @@
 module "network" {
-  source = "./modules/network/network.tf"
+  source = "./modules/network/"
+}
